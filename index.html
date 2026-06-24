@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial Garap Shopee MY</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fff5ef, #ffe8dc);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 0;
+    }
+
+    .hero {
+      background: #ee4d2d;
+      color: white;
+      padding: 35px 25px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(238, 77, 45, 0.35);
+      margin-bottom: 30px;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+
+    .hero p {
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    .badge {
+      display: inline-block;
+      background: white;
+      color: #ee4d2d;
+      padding: 7px 15px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 22px;
+    }
+    
+    .btn-area {
+  width: 100%;
+  margin-top: 26px;
+}
+
+.button-card {
+  width: 100%;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.btn-whatsapp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  padding: 18px 24px;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgba(37, 211, 102, 0.35);
+  transition: 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp svg {
+  width: 26px;
+  height: 26px;
+  fill: white;
+}
+
+    .step-card {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      border: 1px solid #ffd1c2;
+    }
+
+    .step-image {
+      background: #fff0e8;
+      min-height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .step-image img {
+      width: 100%;
+      height: 100%;
+      max-height: 260px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 2px dashed #ff9a7d;
+    }
+
+    .step-image-card {
+  background: #fff0e8;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.step-image-card img {
+  width: 100%;
+    
+  object-fit: contain;
+  border-radius: 16px;
+  border: 2px dashed #ff9a7d;
+  background: white;
+}
+
+    .image-placeholder {
+      width: 100%;
+      min-height: 210px;
+      border: 2px dashed #ff9a7d;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ee4d2d;
+      font-weight: bold;
+      padding: 20px;
+      background: #fff8f4;
+    }
+
+    .step-buttons {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.step-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ee4d2d;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(238, 77, 45, 0.28);
+  transition: 0.2s ease;
+}
+
+.step-link-btn:hover {
+  background: #d84324;
+  transform: translateY(-2px);
+} 
+
+    .step-content {
+      padding: 28px;
+      position: relative;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: #ee4d2d;
+      color: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 22px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 14px rgba(238, 77, 45, 0.3);
+    }
+
+    .step-content h2 {
+      font-size: 23px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .step-content p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    .highlight {
+      color: #ee4d2d;
+      font-weight: bold;
+    }
+
+    .note {
+      margin-top: 30px;
+      background: #222;
+      color: white;
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+
+    .note h3 {
+      margin-bottom: 8px;
+      color: #ffb49f;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 28px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .btn-area {
+      text-align: center;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ee4d2d;
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: bold;
+      box-shadow: 0 8px 20px rgba(238, 77, 45, 0.35);
+    }
+
+    .btn:hover {
+      background: #d84324;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .step-card {
+        grid-template-columns: 1fr;
+      }
+
+      .step-image {
+        min-height: 190px;
+      }
+
+      .step-content {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <section class="hero">
+      <div class="badge">🛍 Tutorial Garap Shopee MY</div>
+      <h1>TUTORIAL GARAP SHOPEE MY</h1>
+      <p>Ikuti langkah-langkah di bawah ini dengan benar agar proses berjalan lancar.</p>
+    </section>
+
+    <section class="steps">
+
+      <div class="step-card">
+        <div class="step-image">
+          
+          <img src="images/step-1.png" alt="Download Shopee MY">
+          
+        </div>
+        <div class="step-content">
+          <div class="step-number">1</div>
+          <h2>Download aplikasi Shopee MY</h2>
+          <p>
+            Download melalui <span class="highlight">Uptodown</span>, lalu cari aplikasi:
+            <br>
+            <span class="highlight">Shopee MY: No Shipping Fee / Shopee CNY</span>
+          </p>
+
+          <div class="step-buttons">
+  <a 
+    href="https://shopee-my-freeshipping-for-all.id.aptoide.com/app" 
+    target="_blank" 
+    class="step-link-btn"
+  >
+    Download UPTOIDE
+  </a>
+</div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-image">
+          <img src="images/step-2.png" alt="Download Shopee MY">
+        </div>
+        <div class="step-content">
+          <div class="step-number">2</div>
+          <h2>Daftar akun Shopee Malaysia</h2>
+          <p>
+            Buat akun Shopee MY menggunakan
+            <span class="highlight">nokos Shopee Malaysia dari FlashOTP</span>.
+          </p>
+
+          <div class="step-buttons">
+  <a 
+    href="https://flashotp.shop" 
+    target="_blank" 
+    class="step-link-btn"
+  >
+    Beli Nokos Shopee MY
+  </a>
+</div>
+        </div>
+      </div>
+
+      <section class="note">
+      <h3>Catatan Penting</h3>
+      <p>
+        Baca tips cara registrasi akun Shopee di bagian bawah halaman order flashotp.   
+      </p>
+      <br>
+      jika sudah berhasil daftar akun Shopee MY, lanjutkan ke langkah berikutnya.
+    </section>
+
+      <div class="step-card">
+        <div class="step-image">
+          <img src="images/step-3.png" alt="Download Shopee MY">
+        </div>
+        <div class="step-content">
+          <div class="step-number">3</div>
+          <h2>Masuk ke halaman profile akun</h2>
+          <p>
+            Setelah berhasil login, masuk ke profile dan buka menu:
+            <br>
+            <span class="highlight">Prabayar, Bills & Tickets</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-image">
+          <img src="images/step-4.png" alt="Download Shopee MY">
+        </div>
+        <div class="step-content">
+          <div class="step-number">4</div>
+          <h2>Pilih Game Credit</h2>
+          <p>
+            Cari menu <span class="highlight">Game Credit</span>, lalu pilih
+            <span class="highlight">Razer Gold</span>.
+          </p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-image">
+          <img src="images/step-5.png" alt="Download Shopee MY">
+        </div>
+        <div class="step-content">
+          <div class="step-number">5</div>
+          <h2>Pilih nominal Rp0 / harga 0</h2>
+          <p>
+            Pilih produk <span class="highlight">Razer Gold</span> yang harganya 0,
+            lalu lanjutkan sampai checkout berhasil.
+          </p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-image">
+          <img src="images/step-6.png" alt="Download Shopee MY">
+        </div>
+        <div class="step-content">
+          <div class="step-number">6</div>
+          <h2>Setorkan Razer Gold ke admin</h2>
+          <p>
+            Setelah berhasil mendapatkan Razer Gold,
+            kirim atau setorkan kodenya ke admin.
+          </p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-image">
+          <img src="images/step-7.png" alt="Download Shopee MY">
+        </div>
+        <div class="step-content">
+          <div class="step-number">7</div>
+          <h2>Pencairan saldo</h2>
+          <p>
+            Admin akan transfer <span class="highlight">Rp20.000</span> ke kamu
+            setelah Razer Gold berhasil dicek.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <section class="note">
+      <h3>Catatan Penting</h3>
+      <p>
+        Pastikan ikuti langkah dengan benar dan gunakan akun sesuai ketentuan aplikasi
+        agar tidak terjadi kendala.
+      </p>
+    </section>
+
+    <div class="button-card">
+  <div class="btn-area">
+    <a 
+      href="https://wa.me/6283119000958" 
+      target="_blank" 
+      class="btn-whatsapp"
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16.04 3C9.44 3 4.08 8.36 4.08 14.96c0 2.1.55 4.15 1.6 5.96L4 29l8.29-1.63a11.9 11.9 0 0 0 3.75.6C22.64 27.96 28 22.6 28 16S22.64 3 16.04 3Zm0 22.9c-1.23 0-2.44-.2-3.59-.62l-.26-.1-4.92.97.99-4.8-.17-.28a9.83 9.83 0 0 1-1.5-5.22c0-5.45 4.43-9.88 9.88-9.88s9.88 4.43 9.88 9.88-4.86 10.05-10.31 10.05Zm5.42-7.37c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/>
+      </svg>
+      Setorkan Razer Gold
+    </a>
+  </div>
+</div>
+
+    <div class="step-card">
+  <div class="step-image-card">
+    <img src="images/step-8.png" alt="Error D01" />
+  </div>
+
+  <div class="step-content">
+    <div class="step-number">!</div>
+    <h2>Cara Mengatasi Error D01</h2>
+
+    <p>
+      Jika muncul error <span class="highlight">D01</span> saat checkout Razer Gold,
+      coba lakukan langkah berikut:
+      <br><br>
+
+      1. Kembali ke menu <span class="highlight">Prepaid, Bills & Tickets</span>.
+      <br>
+      2. Pilih menu <span class="highlight">eSIM</span>.
+      <br>
+      3. Pilih eSIM Indonesia dengan harga <span class="highlight">3.50 RM</span>.
+      <br>
+      4. Pilih metode pembayaran <span class="highlight">7-Eleven</span>.
+      <br>
+      5. Ikuti proses sesuai instruksi aplikasi sampai halaman pembayaran muncul.
+      <br>
+      6. Tunggu sekitar <span class="highlight">5 menit</span>. lalu batalkan pesanan esim tersebut.
+      <br>
+      7. Setelah itu, kembali ke menu <span class="highlight">Game Credit</span>.
+      <br>
+      8. Pilih <span class="highlight">Razer Gold</span>.
+      <br>
+      9. Checkout Razer Gold nominal <span class="highlight">0 RM</span>.
+      <br><br>
+
+      Jika error D01 masih muncul, tunggu beberapa saat sebelum mencoba lagi.
+      Jangan melakukan checkout berulang terlalu cepat agar akun tidak terkena pembatasan tambahan.
+    </p>
+  </div>
+</div>
+
+    <div class="footer">
+      © 2026 Tutorial Shopee MY. All rights reserved.
+    </div>
+
+  </div>
+</body>
+</html>
